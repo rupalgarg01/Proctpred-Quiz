@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #282c34;
+    color: white;
+    padding: 0rem 0rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+.nav-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+.nav-logo span {
+    color: #fa574e;
+}
+.user-icon {
+    font-size: 35px;
+    color: white;
+    margin-right: 10px;
+}
+.user-name {
+    font-weight: bold;
+    color: white !important;
+    font-size: 1.2rem;
+}
+.help-support, .home {
+    font-size: 1.4rem;
+    margin-right: 40px;
+    font-weight: 550;
+    color: white !important;
+    position: relative;
+    transition: color 0.3s ease;
+    padding-bottom: 8px;
+    margin-top: 12px;
+}
+.home:hover, .help-support:hover {
+    color: #fa574e !important;
+}
+.dropdown-menu {
+    background-color: black;
+    border: 1px solid black;
+}
+.dropdown-menu .dropdown-item {
+    color: white;
+}
+.dropdown-menu .dropdown-item:hover {
+    background-color: #fa574e;
+    color: white;
+}
+.navbar-toggler {
+    border-color: white;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.setup-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+.setup-container h1{
+    color:#5079bc;
+}
+#head-id{
+    color:#5079bc;
+
+}
+.setup-card {
+    background-color: #ecf0f1;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.setup-card h2 {
+    color: #34495e;
+    font-size: 1.5em;
+}
+button {
+    background-color: #fa574e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #ff6f61;
+}
+
+.start-test {
+    background-color: #2980b9;
+}
+.start-test:hover {
+    background-color: #164767;
+}
+
+.status-text {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #7f8c8d;
+}
+.orange-border {
+    border-color: #2980b9;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #282c34;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-text {
+    margin: 0;
+}
+

@@ -1,0 +1,189 @@
+* {
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-color: #ebeff2;
+}
+
+.container {
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    border-radius: 10px;
+    height: auto; /* Adjust height based on content */
+    min-height: 100vh; /* Ensure it takes up at least full viewport height */
+    overflow-y: auto; 
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.image {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.right-side {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center contents vertically */
+    overflow-y: auto; /* Add vertical scrolling */
+    max-height: 120vh;
+}
+.header-container {
+    font-size: 24px; /* Increase font size for prominence */
+    color: #5079bc; /* Fallback color for the text */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    background: linear-gradient(90deg, #6a47ff, #fa574e); /* Gradient background */
+    -webkit-background-clip: text; /* Clip background to text for Safari */
+    background-clip: text; /* Standard property */
+    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient in Safari */
+    padding: 10px; /* Add some padding around the text */
+    border-radius: 5px; /* Rounded corners for the background */
+}
+
+p {
+    margin-bottom: 20px; /* Ensure there's space below the paragraph */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.icon-container {
+    position: relative;
+    width: 100%;
+}
+
+.icon-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.icon-container input {
+    width: 100%;
+    padding: 10px 10px 10px 35px; /* Padding for icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.icon-container input:focus {
+    outline: none;
+    border-color: #007BFF; /* Focus effect */
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.btn {
+    background-color: #fa574e;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ebeff2;
+    color: black;
+}
+
+p {
+    font-size: 12px;
+    color: #666;
+    margin-top: 15px;
+}
+
+a {
+    color: #6a47ff;
+    text-decoration: none;
+}
+#mainh{
+    font-weight:450;
+}
+a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 991px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically */
+        width: 100%; /* Full width on smaller screens */
+        border-radius: 0; /* Remove border radius for a more consistent look */
+    }
+
+    .left-side {
+        flex: none; /* Allow the image to take its natural height */
+        height: 50%; /* Adjust the height to give space to the image */
+    }
+
+    .right-side {
+        flex: 1; /* Take up remaining space */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .image {
+        width: 100%; /* Full width of the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically */
+        width: 100%; /* Full width on smaller screens */
+        border-radius: 0; /* Remove border radius for a more consistent look */
+    }
+
+    .left-side {
+        flex: none; /* Allow the image to take its natural height */
+        height: 50%; /* Adjust the height to give space to the image */
+    }
+
+    .right-side {
+        flex: 1; /* Take up remaining space */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .image {
+        width: 100%; /* Full width of the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}

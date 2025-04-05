@@ -1,0 +1,155 @@
+/* confirmation.css */
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ebeff2;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    background: linear-gradient(90deg, #6a47ff, #fa574e); /* Gradient background */
+    -webkit-background-clip: text; /* Clip background to text for Safari */
+    background-clip: text; /* Standard property */
+    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient in Safari */
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 1.7em;
+    color: #555;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Container and Confirmation Box */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.confirmation-box {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.confirmation-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.quiz-summary {
+    margin-bottom: 25px;
+    color: #444;
+    font-size: 1.2em;
+    animation: fadeInUp 1.3s ease-in-out;
+}
+
+.quiz-summary p {
+    margin: 12px 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+strong {
+    font-weight: bold;
+    color: #fa574e;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    border-color: black;
+    gap: 20px;
+    animation: fadeInUp 1.4s ease-in-out;
+}
+
+.action-buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: #fa574e;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(199, 135, 52, 0.5);
+}
+
+.action-buttons a:hover {
+    background-color: #ffffff;
+    color: black;
+    box-shadow: 0 8px 25px rgba(202, 91, 55, 0.75);
+    transform: translateY(-3px);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .confirmation-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .action-buttons a {
+        width: 60%;
+        text-align: center;
+    }
+}

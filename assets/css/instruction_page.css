@@ -1,0 +1,179 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: #ebeff2;
+    overflow-y: auto; /* Enable scrolling */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0; /* Remove padding to allow full-width */
+}
+
+.container {
+    width: 100%; /* Full width of the screen */
+    padding: 20px;
+    background-color: #ebeff2;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0; /* Remove border-radius to stretch the container fully */
+    animation: fadeInContent 2s ease-in-out;
+}
+
+/* Header Styling */
+.quiz-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.quiz-header h1 {
+    font-size: 44px; /* Increase font size for prominence */
+    color: #5079bc; /* Fallback color for the text */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    background: linear-gradient(90deg, #6a47ff, #fa574e); /* Gradient background */
+    -webkit-background-clip: text; /* Clip background to text for Safari */
+    background-clip: text; /* Standard property */
+    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient in Safari */
+    padding: 10px; /* Add some padding around the text */
+    border-radius: 5px; /* Rounded corners for the background */
+}
+
+.quiz-header p {
+    font-size: 1.2em;
+    color: #5079bc;
+    font-weight: bold;
+}
+
+/* Instructions Section */
+.quiz-instructions, .network-connectivity, .anti-cheat {
+    margin-bottom: 40px;
+}
+
+.quiz-instructions h2, .network-connectivity h2, .anti-cheat h2 {
+    font-size: 2em;
+    color: #5079bc;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fa574e;
+    padding-bottom: 10px;
+}
+
+.quiz-instructions p, .network-connectivity p, .anti-cheat p {
+    font-size: 1.3em;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.quiz-instructions ul, .network-connectivity ul, .anti-cheat ul {
+    list-style: none;
+    font-size: 1.2em;
+    color: #444;
+    line-height: 1.8;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.quiz-instructions ul li, .network-connectivity ul li, .anti-cheat ul li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.quiz-instructions ul li::before, .network-connectivity ul li::before, .anti-cheat ul li::before {
+    content: "✔";
+    color: #fa574e;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+}
+
+/* Highlight Text */
+.highlight {
+    color: #fa574e;
+    font-weight: bold;
+    animation: pulseHighlight 1.5s infinite ease-in-out;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.2em;
+    color: #5079bc;
+    margin-bottom: 20px;
+}
+
+footer button {
+    padding: 15px 40px;
+    background-color: #fa574e;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+footer button:hover {
+    background-color: #fa574e;
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseHighlight {
+    0%, 100% {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        text-shadow: 3px 3px 6px rgba(231, 141, 57, 0.6);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .quiz-header h1 {
+        font-size: 2em;
+    }
+
+    .quiz-header p {
+        font-size: 1em;
+    }
+
+    .quiz-instructions h2, .network-connectivity h2, .anti-cheat h2 {
+        font-size: 1.8em;
+    }
+
+    footer button {
+        padding: 10px 30px;
+        font-size: 1.1em;
+    }
+}

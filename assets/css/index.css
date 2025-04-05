@@ -1,0 +1,217 @@
+.left-panel {
+    background-color: #ebeff2;
+    background-image: url('https://www.careerguide.com/career/wp-content/uploads/2021/05/exam.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    padding: 50px;
+    height: 100vh;
+}
+
+.right-panel {
+    background-color: #ebeff2;
+    padding: 20px;
+    height: 100vh;
+    position: relative;
+}
+
+.right-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.content-container {
+    position: relative;
+    z-index: 2;
+    background-color: #ebeff2;
+    border-bottom: 10px solid black;
+    border-left: 10px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
+    height: 57%;
+    box-shadow: 0 -1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.content-container p {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.content-container .btn {
+    font-size: 1.25rem;
+    
+    border-radius: 8px;
+    margin-left: 0;
+}
+
+.content-container .btn-primary-admin {
+    background-color: #fa574e;
+    border-color: black;
+    color: white;
+}
+
+.content-container .btn-secondary-user {
+    background-color: #fa574e;
+    border-color: black;
+    color: white;
+}
+
+.content-container h5 {
+    font-weight: 600;
+    font-size: 1.7rem;
+    text-align: left;
+    color: #5079bc;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.or-text {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.navbar-white {
+    background-color: white !important;
+}
+
+.logo-container {
+    width: 10%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar-logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.icon-btn {
+    font-size: 2rem;
+    color: #333;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 60px;
+    font-weight: 550;
+    font-size: 1.5rem;
+    position: relative;
+    border-bottom: 3px solid #fa574e;
+    padding-bottom: 0px;
+}
+
+.nav-link.active {
+    background-color: #fa574e;
+    color: white !important;
+    border-bottom: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .left-panel, .right-panel {
+        height: auto; /* Auto height for smaller screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .content-container {
+        width: 90%;
+        height: auto;
+    }
+
+    .left-panel {
+        background-size: cover; /* Scale background for smaller screens */
+    }
+
+    .content-container h5 {
+        font-size: 1.5rem; /* Slightly smaller heading */
+    }
+
+    .content-container p {
+        font-size: 1rem;
+    }
+
+    .content-container .btn {
+        font-size: 1rem;
+        
+    }
+
+    .navbar-logo {
+        width: 80%; /* Scale down the logo on smaller screens */
+    }
+
+    .nav-link {
+        font-size: 1.2rem; /* Smaller font size for the nav link */
+        margin-right: 20px;
+    }
+
+    .button-container {
+        flex-direction: row; /* Align buttons horizontally on smaller screens */
+        justify-content: space-evenly;
+    }
+    .or-text{
+        font-size: 0.8rem;
+    }
+
+    
+}
+@media (max-width: 750px) {
+.left-panel {
+background-size: contain; /* Ensures the GIF fits entirely within the panel */
+background-position: center center; /* Keeps the image centered */
+padding: 20px; /* Reduces padding to make more room for the image */
+height: 50vh; /* Adjust height for smaller screens */
+}
+
+.right-panel {
+height: auto; /* Adjust right panel height */
+}
+}
+
+@media (max-width: 576px) {
+    .button-container {
+        flex-direction: column;
+        
+        justify-content: center;
+    }
+
+    .content-container h5 {
+        font-size: 1.3rem; /* Further smaller heading */
+    }
+
+    .content-container p {
+        font-size: 0.9rem; /* Reduce paragraph font size */
+    }
+
+    .content-container .btn {
+        font-size: 0.9rem;
+        
+        margin-bottom: 10px;
+    }
+
+    .navbar-logo {
+        width: 100%; /* Further scaling down the logo */
+    }
+    .nav-link{
+        font-size:0.7rem;
+    }
+    .icon-btn{
+        font-size: 0.7rem;
+    }
+}

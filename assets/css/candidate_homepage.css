@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ebeff2;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #282c34;
+    color: white;
+    position: relative;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Logo */
+.logo h1 {
+    font-size: 2em;
+}
+
+.logo span {
+    color: #fa574e;
+}
+
+/* Buttons */
+.btn {
+    background-color: #fa574e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d94c42;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background: linear-gradient(135deg, #5079bc, #fa574e);
+    color: white;
+    min-height: 80vh;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color:white;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color:white;
+}
+
+.hero .btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translatey(0);
+    }
+    50% {
+        transform: translatey(-10px);
+    }
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 60px;
+    background-color: #ebeff2;
+}
+
+.features-section h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.feature i {
+    font-size: 3em;
+    color: #fa574e;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Live Tournaments Section */
+.live-tournaments-section {
+    text-align: center;
+    padding: 80px 60px;
+    background-color: white; /* A cheerful light color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative; /* For positioning the animated background */
+}
+
+
+h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fa574e; /* Bright and cheerful color */
+    animation: bounce 1.5s infinite; /* Add bounce animation */
+    position: relative; /* Position relative for stacking */
+    z-index: 2; /* Ensure it's on top */
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 30px;
+    z-index: 2; /* Ensure it's on top */
+}
+
+.tournament-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    z-index: 2; /* Ensure it's on top */
+}
+
+.tournament-gifs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tournament-gifs img {
+    width: 100px; /* Adjust size for GIFs */
+    height: auto; /* Maintain aspect ratio */
+    animation: float 3s ease-in-out infinite; /* Floating animation for GIFs */
+}
+
+.tournament-btn {
+    margin-top: 100px;
+    padding: 15px 30px;
+    background-color: #fa574e; /* Bright button color */
+    color: white;
+    font-size: 1.5em; /* Larger font size */
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    position: absolute; /* Position relative for stacking */
+    z-index: 2; /* Ensure it's on top */
+}
+
+.tournament-btn:hover {
+    background-color: #d94c42; /* Darker shade on hover */
+}
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interaction with the confetti */
+    overflow: hidden; /* Prevent overflow */
+    z-index: 0; /* Keep it behind other content */
+}
+
+.confetti .confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fa574e; /* Color of the confetti */
+    opacity: 0.8;
+    animation: fall 1.5s forwards, fade 1.5s forwards;
+}
+#no-quiz-message {
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #fa574e;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh); /* Fall to the bottom */
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+
+/* Quiz Types */
+.quiz-types-section {
+    padding: 80px 60px;
+    background-color: #ebeff2;
+}
+
+.quiz-types-section h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.quiz-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    color:#282c34;
+    
+    text-align: center;
+}
+
+.quiz-type {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width:100%;
+    border-color: black;
+    border: 2px solid black;
+}
+
+.quiz-type:hover {
+    transform: translateY(-10px);
+}
+
+.quiz-type h3 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.quiz-type .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-color: black;
+    border: 1px solid black;
+    
+}
+
+/* Testimonials Section */
+.testimonials-slider-section {
+    padding: 80px 60px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonials-slider-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.testimonial {
+    margin-bottom: 20px;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 60px;
+    background-color: #ebeff2;
+}
+
+.faq-section h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 60px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-section input, 
+.contact-section textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Footer */
+footer {
+    padding: 40px;
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+footer p{
+    color: rgb(191, 185, 185);
+}
+footer ul li a {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #282c34;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        z-index: 10;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .quiz-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+}

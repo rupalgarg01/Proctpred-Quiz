@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ebeff2;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    position: relative; /* Allow absolute positioning of elements inside */
+}
+
+.quiz-header h1 {
+    color: #5079bc; /* Fallback color for the text */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    background: linear-gradient(90deg, #6a47ff, #fa574e); /* Gradient background */
+    -webkit-background-clip: text; /* Clip background to text for Safari */
+    background-clip: text; /* Standard property */
+    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient in Safari */
+    padding: 10px; /* Add some padding around the text */
+    border-radius: 5px; /* Rounded corners for the background */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.quiz-header p {
+    font-size: 1.2em;
+    color: #5079bc;
+    margin-bottom: 40px;
+}
+
+.capture-section, .microphone-section {
+    margin-bottom: 30px;
+    color: #5079bc;
+}
+
+#video, #canvas {
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin: 0 auto; /* Center the video and canvas */
+}
+
+#canvas {
+    display: none; /* Hidden by default until an image is captured */
+}
+
+#countdown {
+    font-size: 2em;
+    color: #f39c12;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+#capture-btn, #reset-btn, #mic-btn, #start-quiz-btn {
+    padding: 12px 30px; /* Slightly larger padding for a more substantial look */
+    background-color: #fa574e;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 5px; /* Add margin for spacing between buttons */
+}
+
+#capture-btn:hover, #reset-btn:hover, #mic-btn:hover, #start-quiz-btn:hover {
+    background-color: #ff6f61;
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+#image-status, #mic-status {
+    font-size: 1.1em;
+    color: #555;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+#start-quiz-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Warning message styling */
+#warning {
+    color: #e74c3c; /* Warning color */
+    font-weight: bold;
+    margin: 15px 0;
+    display: none; /* Hidden by default */
+}
+
+/* Add animations for elements */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-in; /* Fade in effect for the container */
+}

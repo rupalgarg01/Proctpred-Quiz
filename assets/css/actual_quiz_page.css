@@ -1,0 +1,312 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #282c34;
+  padding: 10px 20px;
+}
+
+.navbar .nav-link {
+  color: white;
+  font-size: 16px;
+  margin-right: 20px;
+  font-weight: 550;
+  padding-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #fa574e;
+}
+
+.nav-logo h1 {
+  color: white;
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.nav-logo span {
+  color: #fa574e;
+}
+
+.navbar-nav .user-icon {
+  font-size: 35px;
+  color: white;
+  margin-right: 10px;
+}
+
+.navbar-nav .dropdown-menu {
+  background-color: black;
+  border: 1px solid black;
+}
+
+.navbar-nav .dropdown-item {
+  color: white;
+}
+
+.navbar-nav .dropdown-item:hover {
+  background-color: #fa574e;
+  color: white;
+}
+
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+/* Quiz Header */
+.quiz-header {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Question Container Styles */
+.question-container {
+  display: none;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.question-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+.question-block {
+width: 40px;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgb(58, 81, 118);
+color: white;
+border-radius: 5px;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.question-block.green {
+background-color: green;
+}
+
+.question-block.red {
+background-color: red;
+}
+
+.question-container.active {
+  display: block;
+}
+
+.options {
+  margin-top: 15px;
+}
+
+.options div {
+  margin-bottom: 10px;
+}
+
+/* Option Radio Buttons */
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+}
+
+
+/* Legend Box */
+.legend-box-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.legend-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.legend-box-container div {
+  display: flex;
+  align-items: center;
+}
+
+.legend-box-container strong {
+  margin-left: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Button Styles */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nav-buttons .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.nav-buttons .btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  color: #fff;
+}
+
+.nav-buttons .btn-primary {
+  background-color: #004d99;
+  border: none;
+  color: #fff;
+}
+
+.nav-buttons .btn:hover {
+  opacity: 0.9;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  margin-top:-10px;
+  margin-bottom:-10px;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.footer-text {
+  margin-top: 10px;
+}
+
+.footer-text a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-text a:hover {
+  color: #fa574e;
+  
+}
+
+/* Modal Styles */
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  background-color: #ffa6a1;
+  color: #fff;
+}
+
+.modal-footer button {
+  background-color: #fa574e;
+  color: #fff;
+  border: none;
+}
+
+.modal-footer button:hover {
+  opacity: 0.9;
+}
+
+.modal-backdrop {
+  z-index: 1050 !important;
+}
+
+.modal {
+  z-index: 1060 !important;
+}
+.help{
+  margin-top:12.5px;
+  
+}
+/* Add this to your actual_quiz_page.css */
+.question {
+border: 2px solid #ccc; /* Border around each question */
+border-radius: 8px; /* Rounded corners */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+padding: 15px; /* Add padding for spacing */
+margin-bottom: 20px; /* Add margin for spacing between questions */
+background-color: #f9f9f9; /* Light background for the question box */
+}
+
+.question p {
+font-weight: bold; /* Make question text bold */
+font-size: 16px; /* Adjust font size for readability */
+}
+
+.question div {
+margin-top: 10px; /* Space between each option */
+}
+
+.question label {
+font-size: 14px; /* Adjust font size of options */
+cursor: pointer; /* Make options clickable */
+}
+
+.submit-btn:hover {
+background-color: darkorange;
+}
+.legend {
+display: flex;
+gap: 20px; /* Space between legend items */
+margin-left: 20px;
+margin-bottom: 15px;
+align-items: center;
+justify-content: center; /* Center the items horizontally */
+}
+
+.legend-item {
+display: flex;
+align-items: center;
+gap: 5px;
+}
+
+.legend-square {
+width: 20px;
+height: 20px;
+border-radius: 4px;
+}
+
+.legend-square.red {
+background-color: #fa574e;
+}
+
+.legend-square.green {
+background-color: #28a745;
+}
+
+.legend-square.blue {
+background-color: rgb(58, 81, 118);
+}
