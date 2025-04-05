@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layout</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <!-- Custom CSS -->
+    
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-white border-bottom shadow-sm">
+        <div class="container-fluid d-flex align-items-center">
+            <a class="navbar-brand logo-container" href="#">
+                <img src="assets/images/logo.png" alt="Logo" class="navbar-logo">
+            </a>
+
+            <div class="d-flex ms-auto align-items-center">
+                <a class="nav-link" href="#" id="help-support-link">Help/Support</a>
+                <i class="fas fa-user icon-btn"></i>
+                <i class="fas fa-question-circle icon-btn"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Two Column Layout -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left Panel -->
+            <div class="col-md-6 left-panel d-flex justify-content-center align-items-center">
+            </div>
+
+            <!-- Right Panel with Background Image and Transparent Overlay -->
+            <div class="col-md-6 right-panel d-flex justify-content-center align-items-center">
+                <div class="content-container">
+                    <h5>Create, Learn, and Succeed!</h5>
+                    <p>Instructors, design quizzes tailored to your students’ needs, helping them grow and excel. Participants, take on challenges crafted specifically for you, unlocking new knowledge with each quiz.</p>
+                    <p>Together, let’s achieve more, push boundaries, and succeed—one quiz at a time!</p>
+
+                    <div class="button-container">
+                        <button class="btn btn-primary-admin" style="padding:10px;width:250px;" onclick="button1Click()">Login </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (needed for Bootstrap components) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for Button Clicks -->
+    <script src="./assets/js/index.js"></script>
+
+
+</body>
+</html>
